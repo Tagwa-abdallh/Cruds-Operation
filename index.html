@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <header class="header">
+            <h1 data-lang="crud">CRUD</h1>
+            <p data-lang="productSystem">Product Management System</p>
+            <button id="langBtn" class="engine">العربية</button>
+        </header>
+        
+
+
+
+        <div class="input">
+            <input type="text" id="title" placeholder="title" data-lang="title">
+            <div class="price">
+                <input onkeyup="gettotal()" type="number" id="price" placeholder="price" data-lang="price">
+                <input onkeyup="gettotal()"  type="number" id="taxes" placeholder="taxes" data-lang="taxes">
+                <input onkeyup="gettotal()"  type="number" id="ads" placeholder="ads" data-lang="ads">
+                <input onkeyup="gettotal()"  type="number" id="discount" placeholder="discount" data-lang="discount">
+                <small id="total" data-lang="total">29930</small>
+
+            </div>
+            <input type="number" id="count" placeholder="count" data-lang="count">
+            <input type="text" id="category" placeholder="category" data-lang="category">
+            <button id="submit" data-lang="create">Create</button>
+
+        </div>
+
+
+
+        <div class="output">
+            <div class="sreachBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="sreach" placeholder="Sreach" data-lang="search">
+                <div class="btnSreach">
+                    <button onclick="getSreachMood(this.id)" id="sreachTitle" data-lang="searchByTitle">Sreach By Title</button>
+                    <button onclick="getSreachMood(this.id)" id="sreachCategory" data-lang="searchByCategory">Sreach By Category</button>
+                </div>
+            </div>
+
+            <div id="deleteAll">
+                <button data-lang="deleteAll">Delete All</button>
+            </div>
+              
+            <div class="responsive-table">
+                <div class="row header">
+                  <div class="cell" data-lang="id">ID</div>
+                  <div class="cell" data-lang="title">Title</div>
+                  <div class="cell" data-lang="price">Price</div>
+                  <div class="cell" data-lang="taxes">Taxes</div>
+                  <div class="cell" data-lang="ads">Ads</div>
+                  <div class="cell" data-lang="discount">Discount</div>
+                  <div class="cell" data-lang="total">Total</div>
+                  <div class="cell" data-lang="category">Category</div>
+                  <div class="cell" data-lang="update">Update</div>
+                  <div class="cell" data-lang="delete">Delete</div>
+                </div>
+              
+                <div id="tbody">
+                   
+                </div>
+                
+              </div>
+              
+        </div>
+
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
